@@ -74,7 +74,7 @@ export default function App() {
     supabase.auth.getSession().then(({ data: { session } }) => {
       if (session?.user) {
         setUser(session.user);
-        loadProfile(session.user.id).then(() => {
+        loadProfile(session.user.id).finally(() => {
           setLoading(false);
           setPage('dashboard');
         });

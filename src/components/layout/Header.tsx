@@ -26,7 +26,7 @@ export default function Header({ currentPage, onNavigate, profile, pageTitle }: 
 
   return (
     <>
-      <header className="lg:ml-64 sticky top-0 z-20 bg-slate-950/90 backdrop-blur-md border-b border-slate-800/50 px-4 lg:px-8 h-16 flex items-center justify-between">
+      <header className="sticky top-0 z-20 bg-slate-950/90 backdrop-blur-md border-b border-slate-800/50 px-4 lg:px-8 h-16 flex items-center justify-between">
         {/* Left: mobile menu + title */}
         <div className="flex items-center gap-4">
           <button
