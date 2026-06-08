@@ -63,7 +63,7 @@ export default function App() {
     } else {
       const { data: newProfile } = await supabase
         .from('user_profiles')
-        .insert({ id: userId })
+        .upsert({ id: userId }, { onConflict: 'id' })
         .select('*')
         .maybeSingle();
       if (newProfile) setProfile(newProfile);
@@ -114,10 +114,10 @@ export default function App() {
 
   if (loading) return <LoadingScreen />;
 
-  if (!user || page === 'landing') {
+  if (!user) {
     return (
       <div className="dark">
-        {page === 'landing' && !user && (
+        {page !== 'auth' && (
           <LandingPage onGetStarted={() => setPage('auth')} />
         )}
         {page === 'auth' && (

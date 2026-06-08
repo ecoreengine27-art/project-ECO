@@ -29,11 +29,11 @@ export default function AuthPage({ onSuccess, onBack }: AuthPageProps) {
         return;
       }
       if (data.user) {
-        await supabase.from('user_profiles').insert({
+        await supabase.from('user_profiles').upsert({
           id: data.user.id,
           full_name: fullName,
           username: email.split('@')[0],
-        });
+        }, { onConflict: 'id' });
         onSuccess();
       }
     } else {
