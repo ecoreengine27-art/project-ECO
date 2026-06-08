@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Menu, X, Bell, Search, Cpu, LayoutDashboard, BookOpen, Package, Wrench, Users, Trophy, Leaf, Gamepad2 } from 'lucide-react';
+import { Menu, X, Bell, Search, LayoutDashboard, BookOpen, Package, Wrench, Users, Trophy, Leaf, Gamepad2 } from 'lucide-react';
 import { UserProfile, xpToLevel } from '../../lib/supabase';
 
 type Page = 'landing' | 'auth' | 'dashboard' | 'learn' | 'inventory' | 'projects' | 'community' | 'achievements' | 'puzzle' | 'settings';
@@ -75,9 +75,11 @@ export default function Header({ currentPage, onNavigate, profile, pageTitle }: 
           <div className="absolute inset-0 bg-slate-950/80 backdrop-blur-sm" onClick={() => setMobileMenuOpen(false)} />
           <div className="absolute left-0 top-0 bottom-0 w-72 bg-slate-900 border-r border-slate-800 p-6 animate-slide-in">
             <div className="flex items-center gap-3 mb-8">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-600 to-teal-600 flex items-center justify-center">
-                <Cpu className="w-5 h-5 text-white" />
-              </div>
+              <img
+                src="/WhatsApp_Image_2026-06-08_at_8.40.25_AM.jpeg"
+                alt="EcoReEngine logo"
+                className="w-10 h-10 rounded-xl object-cover"
+              />
               <div>
                 <p className="font-bold text-slate-100">EcoReEngine</p>
                 <p className="text-xs text-emerald-400">Aprende. Recicla. Crea.</p>

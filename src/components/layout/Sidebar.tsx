@@ -1,4 +1,4 @@
-import { Cpu, LayoutDashboard, BookOpen, Package, Wrench, Users, Trophy, Settings, LogOut, Leaf, ChevronRight, Gamepad2 } from 'lucide-react';
+import { LayoutDashboard, BookOpen, Package, Wrench, Users, Trophy, Settings, LogOut, Leaf, ChevronRight, Gamepad2 } from 'lucide-react';
 import { UserProfile, xpToLevel } from '../../lib/supabase';
 
 type Page = 'landing' | 'auth' | 'dashboard' | 'learn' | 'inventory' | 'projects' | 'community' | 'achievements' | 'puzzle' | 'settings';
@@ -27,9 +27,11 @@ export default function Sidebar({ currentPage, onNavigate, profile, onSignOut }:
     <aside className="hidden lg:flex flex-col w-64 min-h-screen bg-slate-900/95 border-r border-slate-800 px-4 py-6 fixed left-0 top-0 bottom-0 z-30">
       {/* Logo */}
       <div className="flex items-center gap-3 px-2 mb-8 cursor-pointer" onClick={() => onNavigate('dashboard')}>
-        <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-600 to-teal-600 flex items-center justify-center shadow-lg shadow-emerald-600/30">
-          <Cpu className="w-5 h-5 text-white" />
-        </div>
+        <img
+          src="/WhatsApp_Image_2026-06-08_at_8.40.25_AM.jpeg"
+          alt="EcoReEngine logo"
+          className="w-10 h-10 rounded-xl object-cover"
+        />
         <div>
           <p className="font-bold text-slate-100 leading-none">EcoReEngine</p>
           <p className="text-xs text-emerald-400 mt-0.5">Aprende. Recicla. Crea.</p>

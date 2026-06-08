@@ -1,4 +1,4 @@
-import { Cpu, Recycle, Zap, Users, Award, ChevronRight, Leaf, Globe, BookOpen, Wrench, ArrowRight, Star, Github } from 'lucide-react';
+import { Recycle, Zap, Users, Award, ChevronRight, Leaf, Globe, BookOpen, Wrench, ArrowRight, Star, Github } from 'lucide-react';
 
 interface LandingPageProps {
   onGetStarted: () => void;
@@ -89,9 +89,11 @@ export default function LandingPage({ onGetStarted }: LandingPageProps) {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-emerald-600 to-teal-600 flex items-center justify-center shadow-lg shadow-emerald-600/30">
-              <Cpu className="w-5 h-5 text-white" />
-            </div>
+            <img
+              src="/WhatsApp_Image_2026-06-08_at_8.40.25_AM.jpeg"
+              alt="EcoReEngine logo"
+              className="w-9 h-9 rounded-xl object-cover shadow-lg"
+            />
             <span className="font-bold text-slate-100 text-lg">EcoReEngine</span>
           </div>
           <div className="hidden md:flex items-center gap-6 text-sm text-slate-400">
@@ -294,9 +296,11 @@ export default function LandingPage({ onGetStarted }: LandingPageProps) {
       <footer className="border-t border-slate-800 py-8 px-4">
         <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2">
-            <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-emerald-600 to-teal-600 flex items-center justify-center">
-              <Cpu className="w-4 h-4 text-white" />
-            </div>
+            <img
+              src="/WhatsApp_Image_2026-06-08_at_8.40.25_AM.jpeg"
+              alt="EcoReEngine logo"
+              className="w-7 h-7 rounded-lg object-cover"
+            />
             <span className="font-semibold text-slate-300">EcoReEngine</span>
           </div>
           <p className="text-sm text-slate-500">

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Cpu, Mail, Lock, User, Eye, EyeOff, Leaf, ArrowLeft } from 'lucide-react';
+import { Mail, Lock, User, Eye, EyeOff, Leaf, ArrowLeft } from 'lucide-react';
 import { supabase } from '../lib/supabase';
 
 interface AuthPageProps {
@@ -70,9 +70,11 @@ export default function AuthPage({ onSuccess, onBack }: AuthPageProps) {
         <div className="glass rounded-3xl p-8">
           {/* Logo */}
           <div className="flex items-center gap-3 mb-8">
-            <div className="w-11 h-11 rounded-2xl bg-gradient-to-br from-emerald-600 to-teal-600 flex items-center justify-center shadow-lg shadow-emerald-600/30">
-              <Cpu className="w-6 h-6 text-white" />
-            </div>
+            <img
+              src="/WhatsApp_Image_2026-06-08_at_8.40.25_AM.jpeg"
+              alt="EcoReEngine logo"
+              className="w-11 h-11 rounded-2xl object-cover shadow-lg"
+            />
             <div>
               <p className="font-bold text-slate-100">EcoReEngine</p>
               <p className="text-xs text-emerald-400">Aprende. Recicla. Crea.</p>
